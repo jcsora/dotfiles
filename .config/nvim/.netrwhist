@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/usr/include/php'
+let g:netrw_dirhist_8='/root/.dotfiles/.config/nvim'
+let g:netrw_dirhist_7='/root/.dotfiles/.config'
+let g:netrw_dirhist_4='/root/.dotfiles/.config'

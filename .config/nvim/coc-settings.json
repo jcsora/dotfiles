@@ -1,0 +1,17 @@
+{
+    "languageserver": {
+        "intelephense": {
+            "command": "intelephense",
+            "args": ["--stdio"],
+            "filetypes": ["php"],
+            "initializationOptions": {
+                "storagePath": "/tmp/intelephense"
+            }
+        }
+    },
+    "clangd.path": "/home/sora/.dotfiles/.config/coc/extensions/coc-clangd-data/install/11.0.0/clangd_11.0.0/bin/clangd",
+    "go.checkForUpdates": "ask",
+    "go.goplsOptions": {
+        "gofumpt":true
+    }
+}

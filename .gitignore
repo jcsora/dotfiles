@@ -1,0 +1,6 @@
+!/.config/coc/extensions/node_modules/*
+/.config/coc/*
+/.config/nvim/undo/*
+/.config/nvim/swaps/*
+/.config/nvim/plugged/*
+/.config/nvim/vimspector-config/*

@@ -1,0 +1,27 @@
+# 不用在提示符的开始换行
+add_newline = false
+
+# 将提示符标志由“❯”换成“➜”
+[character]      # 正在配置的组件名称是“character”
+symbol = "➜"     # “symbol”字段被设置为 "➜"
+error_symbol = "✗"
+use_symbol_for_status = true
+
+# 禁用 package 组件，它不会在提示符中被显示出来
+[package]
+disabled = true
+
+[battery]
+full_symbol = "🔋"
+charging_symbol = "⚡️"
+discharging_symbol = "💀"
+
+[[battery.display]]  # 当电量在 0% 到 10% 时以 "bold red" 样式显示
+threshold = 10
+style = "bold red"
+
+[[battery.display]]  # 当电量在 10% 到 30% 时以 "bold yellow" 样式显示
+threshold = 30
+style = "bold yellow"
+
+# 当电量在 30% 时以上时，电池指示器组件将不会显示出来
