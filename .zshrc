@@ -208,13 +208,11 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 export KUBECONFIG=~/.kube/config
 #kubectl completion bash
-
 
 # Use fd (https://github.com/sharkdp/fd) instead of the default find
 # command for listing path candidates.
@@ -229,13 +227,11 @@ _fzf_compgen_dir() {
   fd --type d --hidden --exclude ".git" . "$1"
 }
 
-source /usr/share/fzf/key-bindings.zsh
+#source /usr/share/fzf/key-bindings.zsh
 
 #export FZF_DEFAULT_COMMAND='fd --type f'
 #export STARSHIP_CONFIG=$DOTFILES/.config
 
 #eval "$(starship init zsh)"
 
-export BAT_THEME="gruvbox"
-
-if [ -e /home/sora/.nix-profile/etc/profile.d/nix.sh ]; then . /home/sora/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+#if [ -e /home/sora/.nix-profile/etc/profile.d/nix.sh ]; then . /home/sora/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
